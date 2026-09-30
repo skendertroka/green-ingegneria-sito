@@ -1,0 +1,154 @@
+{
+  "progetti": [
+    {
+      "titolo": "Villa Collerisana",
+      "descrizione": "Progettazione e realizzazione di villa residenziale con render 3D e documentazione fotografica del costruito.",
+      "copertina": "/img/uploads/villa-collerisana-01.jpg",
+      "foto": [
+        "/img/uploads/villa-collerisana-01.jpg",
+        "/img/uploads/villa-collerisana-02.jpg",
+        "/img/uploads/villa-collerisana-03.jpg",
+        "/img/uploads/villa-collerisana-04.jpg",
+        "/img/uploads/villa-collerisana-05.jpg",
+        "/img/uploads/villa-collerisana-06.jpg",
+        "/img/uploads/villa-collerisana-07.jpg",
+        "/img/uploads/villa-collerisana-08.jpg",
+        "/img/uploads/villa-collerisana-09.jpg",
+        "/img/uploads/villa-collerisana-10.jpg"
+      ]
+    },
+    {
+      "titolo": "Villa Colle S. Tommaso",
+      "descrizione": "Villa residenziale con interventi di progettazione e direzione lavori.",
+      "copertina": "/img/uploads/villa-colle-s-tommaso-01.jpg",
+      "foto": [
+        "/img/uploads/villa-colle-s-tommaso-01.jpg",
+        "/img/uploads/villa-colle-s-tommaso-02.jpg",
+        "/img/uploads/villa-colle-s-tommaso-03.jpg",
+        "/img/uploads/villa-colle-s-tommaso-04.jpg",
+        "/img/uploads/villa-colle-s-tommaso-05.jpg",
+        "/img/uploads/villa-colle-s-tommaso-06.jpg",
+        "/img/uploads/villa-colle-s-tommaso-07.jpg",
+        "/img/uploads/villa-colle-s-tommaso-08.jpg"
+      ]
+    },
+    {
+      "titolo": "Ristrutturazione Casale",
+      "descrizione": "Recupero e ristrutturazione di casale rurale nel territorio di Spoleto.",
+      "copertina": "/img/uploads/ristrutturazione-casale-01.jpg",
+      "foto": [
+        "/img/uploads/ristrutturazione-casale-01.jpg",
+        "/img/uploads/ristrutturazione-casale-02.jpg",
+        "/img/uploads/ristrutturazione-casale-03.jpg",
+        "/img/uploads/ristrutturazione-casale-04.jpg",
+        "/img/uploads/ristrutturazione-casale-05.jpg",
+        "/img/uploads/ristrutturazione-casale-06.jpg"
+      ]
+    },
+    {
+      "titolo": "Via Cerquiglia",
+      "descrizione": "Nuovo edificio residenziale: progettazione strutturale e direzione lavori.",
+      "copertina": "/img/uploads/via-cerquiglia-01.jpg",
+      "foto": [
+        "/img/uploads/via-cerquiglia-01.jpg",
+        "/img/uploads/via-cerquiglia-02.jpg",
+        "/img/uploads/via-cerquiglia-03.jpg",
+        "/img/uploads/via-cerquiglia-04.jpg",
+        "/img/uploads/via-cerquiglia-05.jpg"
+      ]
+    },
+    {
+      "titolo": "Miglioramento Sismico",
+      "descrizione": "Interventi di miglioramento sismico su edifici esistenti — Sisma 2016.",
+      "copertina": "/img/uploads/miglioramento-sismico-01.jpg",
+      "foto": [
+        "/img/uploads/miglioramento-sismico-01.jpg",
+        "/img/uploads/miglioramento-sismico-02.jpg",
+        "/img/uploads/miglioramento-sismico-03.jpg",
+        "/img/uploads/miglioramento-sismico-04.jpg",
+        "/img/uploads/miglioramento-sismico-05.jpg",
+        "/img/uploads/miglioramento-sismico-06.jpg",
+        "/img/uploads/miglioramento-sismico-07.jpg"
+      ]
+    },
+    {
+      "titolo": "Nuova Costruzione c.a.",
+      "descrizione": "Nuova costruzione in cemento armato nell'area del Sisma 2016.",
+      "copertina": "/img/uploads/nuova-costruzione-c-a-01.jpg",
+      "foto": [
+        "/img/uploads/nuova-costruzione-c-a-01.jpg",
+        "/img/uploads/nuova-costruzione-c-a-02.jpg",
+        "/img/uploads/nuova-costruzione-c-a-03.jpg",
+        "/img/uploads/nuova-costruzione-c-a-04.jpg",
+        "/img/uploads/nuova-costruzione-c-a-05.jpg",
+        "/img/uploads/nuova-costruzione-c-a-06.jpg",
+        "/img/uploads/nuova-costruzione-c-a-07.jpg",
+        "/img/uploads/nuova-costruzione-c-a-08.jpg",
+        "/img/uploads/nuova-costruzione-c-a-09.jpg",
+        "/img/uploads/nuova-costruzione-c-a-10.jpg"
+      ]
+    },
+    {
+      "titolo": "Riduzione Vulnerabilità",
+      "descrizione": "Interventi di riduzione della vulnerabilità sismica — Sisma 2016.",
+      "copertina": "/img/uploads/riduzione-vulnerabilita-01.jpg",
+      "foto": [
+        "/img/uploads/riduzione-vulnerabilita-01.jpg",
+        "/img/uploads/riduzione-vulnerabilita-02.jpg",
+        "/img/uploads/riduzione-vulnerabilita-03.jpg",
+        "/img/uploads/riduzione-vulnerabilita-04.jpg",
+        "/img/uploads/riduzione-vulnerabilita-05.jpg",
+        "/img/uploads/riduzione-vulnerabilita-06.jpg",
+        "/img/uploads/riduzione-vulnerabilita-07.jpg",
+        "/img/uploads/riduzione-vulnerabilita-08.jpg"
+      ]
+    },
+    {
+      "titolo": "Riparazione Danno Sisma",
+      "descrizione": "Riparazione dei danni e ripristino strutturale post-sisma 2016.",
+      "copertina": "/img/uploads/riparazione-danno-sisma-01.jpg",
+      "foto": [
+        "/img/uploads/riparazione-danno-sisma-01.jpg",
+        "/img/uploads/riparazione-danno-sisma-02.jpg",
+        "/img/uploads/riparazione-danno-sisma-03.jpg",
+        "/img/uploads/riparazione-danno-sisma-04.jpg",
+        "/img/uploads/riparazione-danno-sisma-05.jpg"
+      ]
+    },
+    {
+      "titolo": "Impianti Meccanici",
+      "descrizione": "Progettazione e installazione di impianti meccanici per edifici civili.",
+      "copertina": "/img/uploads/impianti-meccanici-01.jpg",
+      "foto": [
+        "/img/uploads/impianti-meccanici-01.jpg",
+        "/img/uploads/impianti-meccanici-02.jpg",
+        "/img/uploads/impianti-meccanici-03.jpg"
+      ]
+    },
+    {
+      "titolo": "Villa S. Martino in Trignano",
+      "descrizione": "Progettazione architettonica con render prospettici — Villa S. Martino in Trignano.",
+      "copertina": "/img/uploads/villa-s-martino-in-trignano-01.jpg",
+      "foto": [
+        "/img/uploads/villa-s-martino-in-trignano-01.jpg",
+        "/img/uploads/villa-s-martino-in-trignano-02.jpg",
+        "/img/uploads/villa-s-martino-in-trignano-03.jpg",
+        "/img/uploads/villa-s-martino-in-trignano-04.jpg"
+      ]
+    },
+    {
+      "titolo": "Impianti Fotovoltaici",
+      "descrizione": "Progettazione e realizzazione di impianti fotovoltaici: moduli su copertura piana, quadri di campo e collegamenti elettrici.",
+      "copertina": "/img/uploads/impianti-fotovoltaici-01.jpg",
+      "foto": [
+        "/img/uploads/impianti-fotovoltaici-01.jpg",
+        "/img/uploads/impianti-fotovoltaici-02.jpg",
+        "/img/uploads/impianti-fotovoltaici-03.jpg",
+        "/img/uploads/impianti-fotovoltaici-04.jpg",
+        "/img/uploads/impianti-fotovoltaici-05.jpg"
+      ],
+      "video": "/img/uploads/impianti-fotovoltaici.mp4",
+      "video_anteprima": "/img/uploads/impianti-fotovoltaici-video.jpg"
+    }
+  ]
+}

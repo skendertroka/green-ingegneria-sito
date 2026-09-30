@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: skendertroka/green-ingegneria-sito
+  branch: main
+
+locale: "it"
+site_url: "https://greeningegneria.net"
+display_url: "https://greeningegneria.net"
+logo_url: "https://greeningegneria.net/img/logo.png"
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio"
+    files:
+      - name: "progetti"
+        label: "Progetti del portfolio"
+        file: "data/portfolio.json"
+        fields:
+          - label: "Progetti"
+            name: "progetti"
+            widget: "list"
+            summary: "{{fields.titolo}}"
+            collapsed: true
+            hint: "L'ordine qui è l'ordine sul sito. I primi 6 compaiono anche in home."
+            fields:
+              - {label: "Titolo", name: "titolo", widget: "string"}
+              - {label: "Descrizione", name: "descrizione", widget: "text"}
+              - {label: "Copertina", name: "copertina", widget: "image", required: false, hint: "Se vuota si usa la prima foto."}
+              - label: "Foto"
+                name: "foto"
+                widget: "list"
+                field: {label: "Foto", name: "immagine", widget: "image"}
+              - {label: "Video (facoltativo)", name: "video", widget: "file", required: false, hint: "File MP4, possibilmente sotto i 10 MB."}
+              - {label: "Anteprima del video (facoltativa)", name: "video_anteprima", widget: "image", required: false}
+
+  - name: "home"
+    label: "Home"
+    files:
+      - name: "slideshow"
+        label: "Slideshow della home"
+        file: "data/home.json"
+        fields:
+          - label: "Immagini dello slideshow"
+            name: "slideshow"
+            widget: "list"
+            field: {label: "Immagine", name: "immagine", widget: "image"}

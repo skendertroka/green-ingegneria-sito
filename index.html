@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script type="text/javascript" src="https://embeds.iubenda.com/widgets/ed675fb0-e0e3-4d06-9de5-fb9533ec5d7e.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Ingegneria S.r.l. — Studio di Ingegneria ed Architettura</title>
+<meta name="description" content="Green Ingegneria S.r.l. — Studio di ingegneria ed architettura a Foligno e Spoleto. Progettazione strutturale, efficientamento energetico, coordinamento sicurezza, direzione lavori.">
+<meta name="keywords" content="ingegneria Foligno, ingegneria Spoleto, studio ingegneria Umbria, progettazione strutturale, efficientamento energetico, direzione lavori, Green Ingegneria">
+<meta name="author" content="Green Ingegneria S.r.l.">
+<meta property="og:site_name" content="Green Ingegneria">
+<meta property="og:title" content="Green Ingegneria S.r.l.">
+<meta property="og:description" content="Studio di ingegneria ed architettura a Foligno e Spoleto. Progettazione strutturale, efficientamento energetico, coordinamento sicurezza.">
+<meta property="og:url" content="https://greeningegneria.net">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://greeningegneria.net">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Green Ingegneria",
+  "alternateName": ["Green Ingegneria S.r.l.", "greeningegneria.net"],
+  "url": "https://greeningegneria.net/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Green Ingegneria S.r.l.",
+  "url": "https://greeningegneria.net/",
+  "email": "info@greeningegneria.net",
+  "telephone": "+39 339 3754 614",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Guglielmo Marconi 2A",
+    "addressLocality": "Spoleto",
+    "postalCode": "06049",
+    "addressRegion": "PG",
+    "addressCountry": "IT"
+  },
+  "sameAs": [
+    "https://www.instagram.com/greeningegneria",
+    "https://www.linkedin.com/company/green-ingegneria-s-r-l/"
+  ]
+}
+</script>
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #2d5a27;
+  --green-mid: #3d7a35;
+  --green-light: #e8f0e6;
+  --cream: #f9f7f3;
+  --dark: #1a1a1a;
+  --mid: #555;
+  --border: #d0d8cc;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--dark); overflow-x: hidden; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 4rem; height: 72px;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+nav.scrolled { background: #fff; box-shadow: 0 1px 0 var(--border); }
+nav.on-dark { background: transparent; }
+.nav-logo img { height: 36px; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-family: 'Jost', sans-serif; font-weight: 400; font-size: 0.8rem;
+  letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+  color: inherit; transition: color 0.2s; cursor: pointer;
+}
+.nav-links a:hover { color: var(--green); }
+nav.on-dark .nav-links a { color: #fff; }
+nav.on-dark .nav-logo img { filter: brightness(0) invert(1); }
+.nav-burger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+.nav-burger span { display: block; width: 24px; height: 1.5px; background: var(--dark); transition: 0.3s; }
+nav.on-dark .nav-burger span { background: #fff; }
+
+.page { display: none; min-height: 100vh; }
+.page.active { display: block; }
+
+/* HERO */
+.hero {
+  position: relative; height: 100vh; overflow: hidden;
+  display: flex; align-items: flex-end;
+}
+.hero-slides { position: absolute; inset: 0; z-index: 0; }
+.hero-slide {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  opacity: 0; transform: scale(1.04);
+  transition: opacity 1.4s ease-in-out, transform 8s ease-out;
+}
+.hero-slide.active { opacity: 1; transform: scale(1); }
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(to top, rgba(15,35,12,0.82) 0%, rgba(20,45,16,0.60) 40%, rgba(25,55,20,0.45) 100%);
+}
+.hero-top-bar {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 2; height: 140px;
+  background: linear-gradient(to bottom, rgba(10,25,8,0.5) 0%, transparent 100%);
+}
+.hero-content { position: relative; z-index: 3; padding: 5rem; max-width: 860px; }
+.hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-tag::before { content: ''; display: block; width: 40px; height: 1px; background: rgba(255,255,255,0.3); }
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(3rem, 7vw, 5.5rem); color: #fff; line-height: 1.05; margin-bottom: 2rem;
+}
+.hero h1 em { font-style: italic; color: #b8ddb0; }
+.hero-sub { font-size: 0.88rem; color: rgba(255,255,255,0.65); max-width: 480px; line-height: 1.85; margin-bottom: 3rem; }
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary {
+  background: #fff; color: var(--green); padding: 0.9rem 2.5rem;
+  font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+  border: none; cursor: pointer; transition: background 0.2s; font-family: 'Jost', sans-serif;
+}
+.btn-primary:hover { background: var(--green-light); }
+.btn-outline {
+  background: transparent; color: #fff; padding: 0.9rem 2.5rem;
+  font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.35); cursor: pointer;
+  transition: border-color 0.2s; font-family: 'Jost', sans-serif;
+}
+.btn-outline:hover { border-color: #fff; }
+.hero-stats {
+  position: absolute; right: 5rem; bottom: 5rem; z-index: 3;
+  display: flex; flex-direction: column; gap: 2rem; text-align: right;
+}
+.hero-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: #fff; line-height: 1; }
+.hero-stat-label { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.2rem; }
+.hero-dots {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  z-index: 3; display: flex; gap: 0.5rem;
+}
+.hero-dot {
+  width: 24px; height: 2px; background: rgba(255,255,255,0.3);
+  cursor: pointer; transition: background 0.3s, width 0.3s; border: none;
+}
+.hero-dot.active { background: #fff; width: 40px; }
+.scroll-hint {
+  position: absolute; bottom: 2.5rem; right: 5rem; z-index: 3;
+  display: flex; align-items: center; gap: 0.6rem;
+  color: rgba(255,255,255,0.35); font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+
+.section { padding: 6rem 5rem; }
+.section-label {
+  font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green);
+  margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;
+}
+.section-label::before { content: ''; display: block; width: 28px; height: 1px; background: var(--green); }
+.section-title {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; margin-bottom: 2rem;
+}
+.section-title em { font-style: italic; color: var(--green); }
+
+/* HOME ABOUT — full width, no right panel */
+.home-about { background: var(--green); color: #fff; }
+.home-about-text { padding: 6rem 5rem; max-width: 900px; }
+.home-about-text .section-label { color: rgba(255,255,255,0.4); }
+.home-about-text .section-label::before { background: rgba(255,255,255,0.2); }
+.home-about-text .section-title { color: #fff; margin-bottom: 1.5rem; }
+.home-about-text .section-title em { color: #a8d4a0; }
+.home-about-text p { color: rgba(255,255,255,0.7); line-height: 1.9; font-size: 0.88rem; margin-bottom: 1.2rem; }
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border); margin-top: 3rem;
+}
+.service-card {
+  background: var(--cream); padding: 2.5rem 2rem;
+  position: relative; overflow: hidden; transition: background 0.3s;
+}
+.service-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: var(--green); transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+}
+.service-card:hover { background: #fff; }
+.service-card:hover::after { transform: scaleX(1); }
+.service-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--border); line-height: 1; margin-bottom: 1rem; }
+.service-card h3 { font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.7rem; font-weight: 500; }
+.service-card p { font-size: 0.8rem; color: var(--mid); line-height: 1.7; }
+
+/* PORTFOLIO PREVIEW */
+.portfolio-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem; }
+.portfolio-thumb { aspect-ratio: 4/3; overflow: hidden; cursor: pointer; position: relative; }
+.portfolio-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.portfolio-thumb:hover img { transform: scale(1.06); }
+.pt-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+  opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 1.2rem;
+}
+.portfolio-thumb:hover .pt-overlay { opacity: 1; }
+.pt-overlay span { color: #fff; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--green); color: #fff; padding: 12rem 5rem 5rem;
+  position: relative; overflow: hidden;
+}
+.page-hero::after {
+  content: ''; position: absolute; right: -8rem; top: -8rem;
+  width: 45rem; height: 45rem; border-radius: 50%; border: 1px solid rgba(255,255,255,0.05);
+}
+.page-hero-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+.page-hero h1 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem;
+}
+.page-hero h1 em { font-style: italic; color: #a8d4a0; }
+.page-hero p { max-width: 580px; color: rgba(255,255,255,0.65); line-height: 1.9; font-size: 0.88rem; }
+
+/* TEAM */
+.team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--border); margin-top: 3rem; }
+.team-card { background: #fff; padding: 3rem; }
+.team-role { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green); margin-bottom: 0.7rem; }
+.team-name { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; }
+.team-name em { font-style: italic; }
+.team-divider { width: 28px; height: 1px; background: var(--border); margin: 1.5rem 0; }
+.team-contacts { display: flex; flex-direction: column; gap: 0.6rem; }
+.team-contact { font-size: 0.8rem; color: var(--mid); text-decoration: none; display: flex; align-items: center; gap: 0.6rem; transition: color 0.2s; }
+.team-contact:hover { color: var(--green); }
+
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
+.about-text p { font-size: 0.88rem; line-height: 1.9; color: var(--mid); margin-bottom: 1.2rem; }
+.about-values { display: flex; flex-direction: column; gap: 1.8rem; }
+.value-item { border-left: 2px solid var(--green); padding-left: 1.5rem; }
+.value-item h4 { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.value-item p { font-size: 0.8rem; color: var(--mid); line-height: 1.7; }
+
+/* SERVIZI */
+.services-full { padding: 3rem 5rem 6rem; }
+.service-full-item { display: grid; grid-template-columns: 70px 1fr; gap: 3rem; padding: 3rem 0; border-bottom: 1px solid var(--border); }
+.service-full-item:last-child { border-bottom: none; }
+.service-full-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--border); line-height: 1; }
+.service-full-content h3 { font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; font-weight: 500; }
+.service-full-content p { font-size: 0.86rem; color: var(--mid); line-height: 1.9; }
+
+/* PORTFOLIO */
+.portfolio-filters {
+  display: flex; padding: 0 5rem; background: #fff;
+  border-bottom: 1px solid var(--border); overflow-x: auto;
+  position: sticky; top: 72px; z-index: 100;
+}
+.filter-btn {
+  padding: 1.2rem 1.8rem; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+  background: none; border: none; border-bottom: 2px solid transparent;
+  cursor: pointer; white-space: nowrap; transition: all 0.2s; color: var(--mid); font-family: 'Jost', sans-serif;
+}
+.filter-btn.active { border-bottom-color: var(--green); color: var(--dark); }
+.portfolio-proj-desc { padding: 1.5rem 5rem; background: var(--green-light); }
+.portfolio-proj-desc p { font-size: 0.86rem; color: var(--mid); line-height: 1.8; }
+.portfolio-gallery { padding: 2rem 5rem 5rem; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.gallery-item { aspect-ratio: 4/3; overflow: hidden; cursor: pointer; }
+.gallery-item:nth-child(5n+1) { grid-column: span 2; aspect-ratio: 16/9; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; display: block; }
+.gallery-item:hover img { transform: scale(1.05); }
+
+/* CONTATTI */
+.contatti-grid { display: grid; grid-template-columns: 1fr 1fr; min-height: 55vh; }
+.contatti-info { background: var(--green); color: #fff; padding: 5rem; display: flex; flex-direction: column; justify-content: center; gap: 2.5rem; }
+.contatti-label { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.3rem; }
+.contatti-value { font-size: 0.88rem; color: rgba(255,255,255,0.85); }
+.contatti-value a { color: rgba(255,255,255,0.85); text-decoration: none; }
+.contatti-value a:hover { color: #fff; }
+.contatti-map iframe { width: 100%; height: 100%; min-height: 400px; border: none; display: block; }
+.social-strip { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.social-btn {
+  display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1rem;
+  border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.7);
+  text-decoration: none; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s; font-family: 'Jost', sans-serif;
+}
+.social-btn:hover { border-color: rgba(255,255,255,0.7); color: #fff; }
+
+/* FOOTER — più snello, logo più grande */
+footer {
+  background: #111; color: rgba(255,255,255,0.4); padding: 2rem 5rem;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 2rem;
+}
+.footer-logo img { height: 38px; filter: brightness(0) invert(0.7); }
+.footer-center { text-align: center; font-size: 0.7rem; line-height: 1.7; }
+.footer-right { display: flex; gap: 1rem; justify-content: flex-end; align-items: center; }
+.footer-right a { color: rgba(255,255,255,0.35); transition: color 0.2s; }
+.footer-right a:hover { color: rgba(255,255,255,0.8); }
+
+
+/* Iubenda privacy link style override */
+.iubenda-black { color: rgba(255,255,255,0.4) !important; text-decoration: none !important; }
+.iubenda-black:hover { color: rgba(255,255,255,0.8) !important; }
+
+
+
+
+
+/* LIGHTBOX */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 2000;
+  background: rgba(0,0,0,0.95); align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; }
+#lbVideo { max-width: 90vw; max-height: 85vh; background: #000; }
+.gallery-video { position: relative; }
+.play-badge { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 54px; height: 54px; border-radius: 50%; background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.75); display: flex; align-items: center;
+  justify-content: center; pointer-events: none; transition: background 0.3s; }
+.play-badge::after { content: ''; display: block; margin-left: 4px;
+  border-left: 15px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.gallery-video:hover .play-badge { background: rgba(45,90,39,0.85); }
+.lb-close { position: absolute; top: 1.5rem; right: 2rem; color: rgba(255,255,255,0.5); font-size: 1.8rem; cursor: pointer; background: none; border: none; }
+.lb-close:hover { color: #fff; }
+.lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.5); font-size: 2rem; cursor: pointer; background: none; border: none; padding: 1rem; transition: color 0.2s; }
+.lb-prev { left: 0.5rem; } .lb-next { right: 0.5rem; }
+.lb-prev:hover, .lb-next:hover { color: #fff; }
+.lb-counter { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.35); font-size: 0.7rem; letter-spacing: 0.1em; }
+
+/* ===== TABLET (max 1024px) ===== */
+@media (max-width: 1024px) {
+  nav { padding: 0 2rem; }
+  .section { padding: 5rem 3rem; }
+  .home-about-text { padding: 5rem 3rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats { right: 3rem; bottom: 3rem; }
+  .hero-content { padding: 4rem 3rem; }
+  .portfolio-preview { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { gap: 3rem; }
+  .page-hero { padding: 10rem 3rem 4rem; }
+  .portfolio-filters { padding: 0 3rem; }
+  .portfolio-gallery, .portfolio-proj-desc { padding-left: 3rem; padding-right: 3rem; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item:nth-child(5n+1) { grid-column: span 2; }
+  .services-full { padding: 3rem 3rem 5rem; }
+  .contatti-grid { grid-template-columns: 1fr; }
+  .contatti-info { padding: 4rem 3rem; }
+  footer { padding: 2rem 3rem; }
+}
+
+/* ===== MOBILE (max 768px) ===== */
+@media (max-width: 768px) {
+  nav { padding: 0 1.2rem; height: 64px; }
+  .nav-logo img { height: 30px; }
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column; position: fixed;
+    inset: 0; top: 64px; background: #fff; padding: 2rem 1.5rem;
+    gap: 1.8rem; z-index: 999; overflow-y: auto;
+  }
+  .nav-links.open a { font-size: 1rem; letter-spacing: 0.08em; color: var(--dark) !important; }
+  .nav-burger { display: flex; }
+  .hero-content { padding: 2rem 1.2rem 3rem; max-width: 100%; }
+  .hero h1 { font-size: clamp(2.2rem, 9vw, 3rem); margin-bottom: 1.2rem; }
+  .hero-sub { font-size: 0.85rem; margin-bottom: 2rem; max-width: 100%; }
+  .hero-cta { gap: 0.8rem; }
+  .btn-primary, .btn-outline { padding: 0.8rem 1.8rem; font-size: 0.7rem; }
+  .hero-stats { display: none; }
+  .hero-dots { bottom: 1.5rem; }
+  .scroll-hint { display: none; }
+  .section { padding: 3.5rem 1.2rem; }
+  .section-title { font-size: clamp(1.7rem, 6vw, 2.2rem); }
+  .home-about-text { padding: 3.5rem 1.2rem; }
+  .services-grid { grid-template-columns: 1fr; gap: 1px; }
+  .service-card { padding: 2rem 1.5rem; }
+  .service-num { font-size: 2.2rem; }
+  .portfolio-preview { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .page-hero { padding: 8rem 1.2rem 3rem; }
+  .page-hero h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .page-hero p { font-size: 0.85rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-values { gap: 1.2rem; }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-card { padding: 2rem 1.5rem; }
+  .team-name { font-size: 1.6rem; }
+  .services-full { padding: 1.5rem 1.2rem 3.5rem; }
+  .service-full-item { grid-template-columns: 40px 1fr; gap: 1.2rem; padding: 2rem 0; }
+  .service-full-num { font-size: 2.5rem; }
+  .portfolio-filters { padding: 0 1.2rem; top: 64px; }
+  .filter-btn { padding: 1rem 0.9rem; font-size: 0.62rem; }
+  .portfolio-proj-desc { padding: 1.2rem; }
+  .portfolio-gallery { padding: 1.5rem 1.2rem 3.5rem; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .gallery-item:nth-child(5n+1) { grid-column: span 1; aspect-ratio: 4/3; }
+  .contatti-grid { grid-template-columns: 1fr; }
+  .contatti-info { padding: 3rem 1.2rem; gap: 1.8rem; }
+  .contatti-map iframe { min-height: 280px; }
+  .social-strip { gap: 0.5rem; }
+  .social-btn { padding: 0.5rem 0.8rem; font-size: 0.62rem; }
+  footer { grid-template-columns: 1fr; text-align: center; gap: 0.8rem; padding: 1.5rem 1.2rem; }
+  .footer-logo img { height: 32px; }
+  .footer-right { justify-content: center; }
+  .lb-prev { left: 0; }
+  .lb-next { right: 0; }
+}
+
+/* ===== SMALL MOBILE (max 400px) ===== */
+@media (max-width: 400px) {
+  .hero h1 { font-size: 2rem; }
+  .hero-cta { flex-direction: column; }
+  .btn-primary, .btn-outline { text-align: center; width: 100%; }
+  .services-grid { grid-template-columns: 1fr; }
+  .portfolio-preview { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item:nth-child(5n+1) { grid-column: span 1; aspect-ratio: 4/3; }
+  .filter-btn { padding: 0.8rem 0.6rem; font-size: 0.56rem; }
+  .team-name { font-size: 1.4rem; }
+  .contatti-info { padding: 2.5rem 1rem; }
+  .social-strip { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav id="mainNav" class="on-dark">
+  <div class="nav-logo"><img id="navLogo" src="/img/logo.png" alt="Green Ingegneria"></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a onclick="showPage('home')">Home</a></li>
+    <li><a onclick="showPage('chisiamo')">Chi Siamo</a></li>
+    <li><a onclick="showPage('servizi')">Servizi</a></li>
+    <li><a onclick="showPage('portfolio')">Portfolio</a></li>
+    <li><a onclick="showPage('contatti')">Contatti</a></li>
+  </ul>
+  <div class="nav-burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">&#x2715;</button>
+  <button class="lb-prev" onclick="lbNav(-1)">&#8592;</button>
+  <img id="lbImg" src="" alt="">
+  <video id="lbVideo" controls playsinline preload="metadata" style="display:none"></video>
+  <button class="lb-next" onclick="lbNav(1)">&#8594;</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+
+
+
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="hero-slides" id="heroSlides"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-top-bar"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Spoleto &middot; Foligno &middot; Umbria</div>
+      <h1>Ingegneria<br><em>che costruisce</em><br>il futuro</h1>
+      <p class="hero-sub">Società di ingegneria ed architettura. Progettazione strutturale, efficientamento energetico, sicurezza cantieri e direzione lavori.</p>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="showPage('portfolio')">Vedi i progetti</button>
+        <button class="btn-outline" onclick="showPage('contatti')">Contattaci</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">2024</div><div class="hero-stat-label">Fondazione</div></div>
+      <div><div class="hero-stat-num">4</div><div class="hero-stat-label">Professionisti</div></div>
+      <div><div class="hero-stat-num">349+</div><div class="hero-stat-label">Progetti</div></div>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+    <div class="scroll-hint">
+      <svg width="14" height="14" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+      Scopri
+    </div>
+  </div>
+
+  <!-- About — full width, no right panel -->
+  <div class="home-about">
+    <div class="home-about-text">
+      <div class="section-label">Chi siamo</div>
+      <h2 class="section-title">Servizi di <em>ingegneria</em><br>integrata</h2>
+      <p>Green Ingegneria S.r.l. nasce dalla fusione di professionisti che operavano su tutto il territorio nazionale, con l'obiettivo di offrire al cliente una soluzione completa in ogni ambito della progettazione e del costruito.</p>
+      <p>Dalla progettazione strutturale alla direzione lavori, dall'efficientamento energetico al coordinamento della sicurezza: un solo interlocutore per ogni aspetto tecnico e procedurale.</p>
+      <button class="btn-outline" onclick="showPage('chisiamo')" style="margin-top:1rem;">Scopri lo studio</button>
+    </div>
+  </div>
+
+  <!-- Servizi -->
+  <div class="section">
+    <div class="section-label">I nostri servizi</div>
+    <h2 class="section-title">Competenze <em>tecniche</em> a 360 gradi</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Architettura e Urbanistica</h3>
+        <p>Progettazione architettonica, pratiche edilizie e piani di lottizzazione.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Progettazione Strutturale</h3>
+        <p>Miglioramento, adeguamento sismico e interventi locali su edifici esistenti. Nuove costruzioni in c.a., acciaio e legno.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Efficientamento Energetico</h3>
+        <p>Diagnosi energetica di edifici esistenti, progettazione di impianti meccanici, certificazioni di sostenibilità ambientale (ARPA), domande di contributo per interventi di efficientamento (Conto Termico 3.0).</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>Coordinamento della Sicurezza</h3>
+        <p>Redazione dei Piani di Sicurezza e Coordinamento (PSC), Piani Operativi di Sicurezza (POS), coordinamento della sicurezza nei cantieri in fase di progettazione ed esecuzione.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3>Direzione Lavori e Collaudi</h3>
+        <p>Gestione del cantiere in tutte le sue fasi operative e redazione dei collaudi statici.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <button class="btn-primary" onclick="showPage('servizi')">Tutti i servizi</button>
+    </div>
+  </div>
+
+  <!-- Portfolio preview -->
+  <div class="section" style="background:#fff; padding-top:5rem; padding-bottom:5rem;">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Alcuni dei nostri <em>progetti</em></h2>
+    <div class="portfolio-preview" id="homePortfolioPreview"></div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <button class="btn-primary" onclick="showPage('portfolio')">Tutti i progetti</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo"><img src="/img/logo.png" alt="Green Ingegneria"></div>
+    <div class="footer-center">
+      Green Ingegneria S.r.l. &mdash; P.IVA 03942700547<br>
+      Via G. Marconi 2A, Spoleto &middot; Via F. Fedeli 1B, Foligno<br>
+      <span style="margin-top:0.2rem;display:block;">&copy; 2025 Green Ingegneria S.r.l. &mdash; <a href="https://www.iubenda.com/privacy-policy/84667687" class="iubenda-black iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a> &middot; <a href="https://www.iubenda.com/privacy-policy/84667687/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Cookie Policy">Cookie Policy</a></span>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.instagram.com/greeningegneria?igsh=YWI4ZnVmZGVuYTAx" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+      <a href="https://www.linkedin.com/company/green-ingegneria-s-r-l/" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></a>
+      <a href="https://maps.app.goo.gl/71Hfh8ATYvHi1Gk98" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></a>
+    </div>
+  </footer>
+</div>
+
+<!-- CHI SIAMO -->
+<div id="page-chisiamo" class="page">
+  <div class="page-hero">
+    <div class="page-hero-label">Green Ingegneria S.r.l.</div>
+    <h1>Lo <em>studio</em></h1>
+    <p>Società di Ingegneria ed Architettura con sede a Spoleto e sede operativa a Foligno. Un team unito dalla passione per il costruito e l'innovazione tecnica.</p>
+  </div>
+  <div class="section">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label">La nostra storia</div>
+        <h2 class="section-title">Professionisti <em>uniti</em> da una visione comune</h2>
+        <p>Green Ingegneria S.r.l. nasce dalla fusione di varie figure professionali che operavano individualmente su tutto il territorio nazionale, con lo scopo di offrire al cliente una soluzione completa in ogni suo ramo di applicazione sia per la nuova costruzione che per il restauro e l'efficientamento del patrimonio edilizio esistente.</p>
+        <p>Attraverso la progettazione, la direzione lavori, il coordinamento della sicurezza e la ricerca di materiali innovativi, lo studio garantisce un servizio integrato e di qualità. Si occupa direttamente anche di tutta la procedura amministrativa: reperimento fondi europei, statali e regionali, richiesta di rimborso e detrazioni fiscali.</p>
+      </div>
+      <div>
+        <div class="section-label">I nostri valori</div>
+        <div class="about-values">
+          <div class="value-item"><h4>Integrazione</h4><p>Un solo interlocutore per tutti gli aspetti tecnici, procedurali e finanziari del progetto.</p></div>
+          <div class="value-item"><h4>Innovazione</h4><p>Ricerca e sviluppo di materiali e tecniche innovative al servizio del cliente.</p></div>
+          <div class="value-item"><h4>Territorio</h4><p>Radicamento nel territorio umbro con capacità di operare su scala nazionale.</p></div>
+          <div class="value-item"><h4>Sostenibilità</h4><p>Attenzione all'efficientamento energetico e all'uso di fonti rinnovabili e bio-edilizia.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 0 5rem 6rem;">
+    <div class="section-label">Il team</div>
+    <h2 class="section-title" style="margin-bottom:0;">I <em>professionisti</em></h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-role">Architetto &middot; Direttore Tecnico</div>
+        <div class="team-name">Paolo <em>Cicogna</em></div>
+        <div class="team-divider"></div>
+        <div class="team-contacts">
+          <a href="mailto:info@greeningegneria.net" class="team-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>info@greeningegneria.net</a>
+          <a href="tel:+393927638366" class="team-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.22 4.22 2 2 0 012.22 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.08-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+39 392 7638 366</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">Ingegnere</div>
+        <div class="team-name">Alessio <em>Cicogna</em></div>
+        <div class="team-divider"></div>
+        <div class="team-contacts">
+          <a href="tel:+393393754614" class="team-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.22 4.22 2 2 0 012.22 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.08-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+39 339 3754 614</a>
+          <a href="mailto:cicogna@greeningegneria.net" class="team-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>cicogna@greeningegneria.net</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">Ingegnere</div>
+        <div class="team-name">Nicola <em>Evangelisti</em></div>
+        <div class="team-divider"></div>
+        <div class="team-contacts">
+          <a href="tel:+393936332780" class="team-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.22 4.22 2 2 0 012.22 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.08-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+39 393 6332 780</a>
+          <a href="mailto:evangelisti@greeningegneria.net" class="team-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>evangelisti@greeningegneria.net</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">Ingegnere</div>
+        <div class="team-name">Ramazan <em>Murati</em></div>
+        <div class="team-divider"></div>
+        <div class="team-contacts">
+          <a href="tel:+393927638366" class="team-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.22 4.22 2 2 0 012.22 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.08-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+39 392 7638 366</a>
+          <a href="mailto:murati@greeningegneria.net" class="team-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>murati@greeningegneria.net</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo"><img src="/img/logo.png" alt="Green Ingegneria"></div>
+    <div class="footer-center">Green Ingegneria S.r.l. &mdash; P.IVA 03942700547<br>Via G. Marconi 2A, Spoleto &middot; Via F. Fedeli 1B, Foligno<br><span style="margin-top:0.2rem;display:block;">&copy; 2025 &mdash; <a href="https://www.iubenda.com/privacy-policy/84667687" class="iubenda-black iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a> &middot; <a href="https://www.iubenda.com/privacy-policy/84667687/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Cookie Policy">Cookie Policy</a></span></div>
+    <div class="footer-right">
+      <a href="https://www.instagram.com/greeningegneria?igsh=YWI4ZnVmZGVuYTAx" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+      <a href="https://www.linkedin.com/company/green-ingegneria-s-r-l/" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></a>
+    </div>
+  </footer>
+</div>
+
+<!-- SERVIZI -->
+<div id="page-servizi" class="page">
+  <div class="page-hero">
+    <div class="page-hero-label">Competenze tecniche</div>
+    <h1>I nostri <em>servizi</em></h1>
+    <p>Un'offerta integrata che copre ogni aspetto della progettazione, realizzazione e gestione del patrimonio edilizio civile e industriale.</p>
+  </div>
+  <div class="services-full">
+    <div class="service-full-item">
+      <div class="service-full-num">01</div>
+      <div class="service-full-content">
+        <h3>Architettura e Urbanistica</h3>
+        <p>Progettazione architettonica per residenze, edifici pubblici e complessi industriali. Pratiche edilizie: CILA, SCIA, permessi di costruire. Piani di lottizzazione. Restauro conservativo e recupero del patrimonio edilizio esistente.</p>
+      </div>
+    </div>
+    <div class="service-full-item">
+      <div class="service-full-num">02</div>
+      <div class="service-full-content">
+        <h3>Progettazione Strutturale</h3>
+        <p>Miglioramento, adeguamento sismico e interventi locali su edifici esistenti. Nuove costruzioni in c.a., acciaio e legno. Strutture per edifici pubblici, residenze private e capannoni industriali. Opere d'arte stradali: paratie, sovrappassi, scatolari ferroviari, ponti e passerelle.</p>
+      </div>
+    </div>
+    <div class="service-full-item">
+      <div class="service-full-num">03</div>
+      <div class="service-full-content">
+        <h3>Efficientamento Energetico</h3>
+        <p>Diagnosi energetica di edifici esistenti, progettazione di impianti meccanici, certificazioni di sostenibilità ambientale (ARPA), domande di contributo per interventi di efficientamento (Conto Termico 3.0). Studi di fattibilità, finanza agevolata, certificazione energetica APE/AQE, detrazioni fiscali.</p>
+      </div>
+    </div>
+    <div class="service-full-item">
+      <div class="service-full-num">04</div>
+      <div class="service-full-content">
+        <h3>Coordinamento della Sicurezza</h3>
+        <p>Redazione dei Piani di Sicurezza e Coordinamento (PSC), Piani Operativi di Sicurezza (POS), coordinamento della sicurezza nei cantieri in fase di progettazione ed esecuzione. Gestione della sicurezza per committenti pubblici e privati.</p>
+      </div>
+    </div>
+    <div class="service-full-item">
+      <div class="service-full-num">05</div>
+      <div class="service-full-content">
+        <h3>Direzione Lavori e Collaudi</h3>
+        <p>Gestione del cantiere in tutte le sue fasi operative e redazione dei collaudi statici. Perizie tecniche e stime. Gestione amministrativa completa: reperimento fondi europei, statali e regionali, rimborsi e detrazioni fiscali.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo"><img src="/img/logo.png" alt="Green Ingegneria"></div>
+    <div class="footer-center">Green Ingegneria S.r.l. &mdash; P.IVA 03942700547<br>Via G. Marconi 2A, Spoleto &middot; Via F. Fedeli 1B, Foligno<br><span style="margin-top:0.2rem;display:block;">&copy; 2025 &mdash; <a href="https://www.iubenda.com/privacy-policy/84667687" class="iubenda-black iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a> &middot; <a href="https://www.iubenda.com/privacy-policy/84667687/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Cookie Policy">Cookie Policy</a></span></div>
+    <div class="footer-right">
+      <a href="https://www.instagram.com/greeningegneria?igsh=YWI4ZnVmZGVuYTAx" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+      <a href="https://www.linkedin.com/company/green-ingegneria-s-r-l/" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></a>
+    </div>
+  </footer>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="page-portfolio" class="page">
+  <div class="page-hero">
+    <div class="page-hero-label">I nostri lavori</div>
+    <h1>Il nostro <em>portfolio</em></h1>
+    <p>Progetti realizzati in Umbria e su tutto il territorio nazionale: dalla progettazione strutturale agli interventi post-sisma, dalle ville residenziali al recupero del patrimonio rurale.</p>
+  </div>
+  <div class="portfolio-filters" id="portfolioFilters"></div>
+  <div class="portfolio-proj-desc"><p id="projDesc"></p></div>
+  <div class="portfolio-gallery"><div class="gallery-grid" id="galleryGrid"></div></div>
+  <footer>
+    <div class="footer-logo"><img src="/img/logo.png" alt="Green Ingegneria"></div>
+    <div class="footer-center">Green Ingegneria S.r.l. &mdash; P.IVA 03942700547<br>Via G. Marconi 2A, Spoleto &middot; Via F. Fedeli 1B, Foligno<br><span style="margin-top:0.2rem;display:block;">&copy; 2025 &mdash; <a href="https://www.iubenda.com/privacy-policy/84667687" class="iubenda-black iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a> &middot; <a href="https://www.iubenda.com/privacy-policy/84667687/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Cookie Policy">Cookie Policy</a></span></div>
+    <div class="footer-right">
+      <a href="https://www.instagram.com/greeningegneria?igsh=YWI4ZnVmZGVuYTAx" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+      <a href="https://www.linkedin.com/company/green-ingegneria-s-r-l/" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></a>
+    </div>
+  </footer>
+</div>
+
+<!-- CONTATTI -->
+<div id="page-contatti" class="page">
+  <div class="page-hero">
+    <div class="page-hero-label">Dove siamo</div>
+    <h1><em>Contattaci</em></h1>
+    <p>Siamo a tua disposizione per richieste di informazioni, preventivi e consulenze. Scrivici o chiamaci direttamente.</p>
+  </div>
+  <div class="contatti-grid">
+    <div class="contatti-info">
+      <div><div class="contatti-label">Sede legale</div><div class="contatti-value">Via Guglielmo Marconi 2A<br>06049 Spoleto (PG)</div></div>
+      <div><div class="contatti-label">Sede operativa</div><div class="contatti-value">Via Feliciano Fedeli 1B<br>06034 Foligno (PG)</div></div>
+      <div><div class="contatti-label">Telefono</div><div class="contatti-value"><a href="tel:+393393754614">+39 339 3754 614</a></div></div>
+      <div><div class="contatti-label">Email</div><div class="contatti-value"><a href="mailto:info@greeningegneria.net">info@greeningegneria.net</a></div></div>
+      <div><div class="contatti-label">P.IVA</div><div class="contatti-value">03942700547</div></div>
+      <div class="social-strip">
+        <a href="https://www.instagram.com/greeningegneria?igsh=YWI4ZnVmZGVuYTAx&utm_source=qr" target="_blank" class="social-btn"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg> Instagram</a>
+        <a href="https://www.linkedin.com/company/green-ingegneria-s-r-l/" target="_blank" class="social-btn"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg> LinkedIn</a>
+        <a href="https://maps.app.goo.gl/71Hfh8ATYvHi1Gk98" target="_blank" class="social-btn"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Maps</a>
+        <a href="https://wa.me/393393754614" target="_blank" class="social-btn"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg> WhatsApp</a>
+      </div>
+    </div>
+    <div class="contatti-map">
+      <iframe src="https://maps.google.com/maps?q=Via+Feliciano+Fedeli+1B+Foligno+PG+Italy&output=embed" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo"><img src="/img/logo.png" alt="Green Ingegneria"></div>
+    <div class="footer-center">Green Ingegneria S.r.l. &mdash; P.IVA 03942700547<br>Via G. Marconi 2A, Spoleto &middot; Via F. Fedeli 1B, Foligno<br><span style="margin-top:0.2rem;display:block;">&copy; 2025 &mdash; <a href="https://www.iubenda.com/privacy-policy/84667687" class="iubenda-black iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a> &middot; <a href="https://www.iubenda.com/privacy-policy/84667687/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Cookie Policy">Cookie Policy</a></span></div>
+    <div class="footer-right">
+      <a href="https://www.instagram.com/greeningegneria?igsh=YWI4ZnVmZGVuYTAx" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+      <a href="https://www.linkedin.com/company/green-ingegneria-s-r-l/" target="_blank"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></a>
+    </div>
+  </footer>
+</div>
+
+<script>
+// DATI: caricati da /data/*.json (modificabili dal pannello /admin)
+let HERO_IMGS = [], PROJECTS = [];
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function coverOf(p) { return p.copertina || (p.foto && p.foto[0]) || ''; }
+async function loadData() {
+  try {
+    const [home, port] = await Promise.all([
+      fetch('/data/home.json', {cache: 'no-cache'}).then(r => r.json()),
+      fetch('/data/portfolio.json', {cache: 'no-cache'}).then(r => r.json())
+    ]);
+    HERO_IMGS = (home && home.slideshow) || [];
+    PROJECTS = (port && port.progetti) || [];
+  } catch (e) {
+    console.error('Errore nel caricamento dei dati del sito', e);
+  }
+  initHero();
+  renderHomePreview();
+  if (PROJECTS.length) renderPortfolio(0);
+}
+
+
+let lbImages = [], lbIndex = 0, currentProject = 0;
+
+// HERO SLIDESHOW
+let heroIndex = 0, heroTimer;
+function initHero() {
+  if (!HERO_IMGS.length) return;
+  const slidesEl = document.getElementById('heroSlides');
+  const dotsEl = document.getElementById('heroDots');
+  slidesEl.innerHTML = HERO_IMGS.map((src, i) =>
+    `<div class="hero-slide ${i===0?'active':''}" style="background-image:url('${src}')"></div>`
+  ).join('');
+  dotsEl.innerHTML = HERO_IMGS.map((_, i) =>
+    `<button class="hero-dot ${i===0?'active':''}" onclick="goHeroSlide(${i})"></button>`
+  ).join('');
+  heroTimer = setInterval(nextHeroSlide, 5000);
+}
+function goHeroSlide(i) {
+  document.querySelectorAll('.hero-slide')[heroIndex].classList.remove('active');
+  document.querySelectorAll('.hero-dot')[heroIndex].classList.remove('active');
+  heroIndex = i;
+  document.querySelectorAll('.hero-slide')[heroIndex].classList.add('active');
+  document.querySelectorAll('.hero-dot')[heroIndex].classList.add('active');
+  clearInterval(heroTimer);
+  heroTimer = setInterval(nextHeroSlide, 5000);
+}
+function nextHeroSlide() { goHeroSlide((heroIndex + 1) % HERO_IMGS.length); }
+
+// NAV
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  window.scrollTo(0, 0);
+  updateNav();
+  if (id === 'portfolio') renderPortfolio(currentProject);
+  document.getElementById('navLinks').classList.remove('open');
+}
+function updateNav() {
+  const nav = document.getElementById('mainNav');
+  const activePage = document.querySelector('.page.active').id.replace('page-', '');
+  if (activePage === 'home' && window.scrollY < 80) {
+    nav.classList.add('on-dark'); nav.classList.remove('scrolled');
+  } else {
+    nav.classList.remove('on-dark'); nav.classList.add('scrolled');
+  }
+}
+window.addEventListener('scroll', updateNav);
+function toggleMenu() {
+  const links = document.getElementById('navLinks');
+  const nav = document.getElementById('mainNav');
+  links.classList.toggle('open');
+  if (links.classList.contains('open')) {
+    nav.classList.remove('on-dark');
+    nav.classList.add('scrolled');
+  } else {
+    updateNav();
+  }
+}
+
+// PORTFOLIO
+function renderPortfolio(idx) {
+  if (!PROJECTS.length) return;
+  idx = Math.min(Math.max(0, idx), PROJECTS.length - 1);
+  currentProject = idx;
+  const proj = PROJECTS[idx];
+  document.getElementById('portfolioFilters').innerHTML = PROJECTS.map((p, i) =>
+    `<button class="filter-btn ${i===idx?'active':''}" onclick="renderPortfolio(${i})">${esc(p.titolo)}</button>`
+  ).join('');
+  document.getElementById('projDesc').textContent = proj.descrizione || '';
+  const items = (proj.foto || []).slice();
+  if (proj.video) items.push({src: proj.video, poster: proj.video_anteprima || coverOf(proj)});
+  lbImages = items;
+  document.getElementById('galleryGrid').innerHTML = items.map((item, i) =>
+    (typeof item === 'string')
+      ? `<div class="gallery-item" onclick="openLightbox(${i})"><img src="${esc(item)}" alt="" loading="lazy"></div>`
+      : `<div class="gallery-item gallery-video" onclick="openLightbox(${i})"><img src="${esc(item.poster)}" alt="" loading="lazy"><span class="play-badge"></span></div>`
+  ).join('');
+}
+function renderHomePreview() {
+  document.getElementById('homePortfolioPreview').innerHTML = PROJECTS.slice(0, 6).map((p, i) =>
+    `<div class="portfolio-thumb" onclick="showPage('portfolio');setTimeout(()=>renderPortfolio(${i}),50)">
+      <img src="${esc(coverOf(p))}" alt="${esc(p.titolo)}" loading="lazy">
+      <div class="pt-overlay"><span>${esc(p.titolo)}</span></div>
+    </div>`
+  ).join('');
+}
+
+// LIGHTBOX
+function lbShow() {
+  const item = lbImages[lbIndex];
+  const img = document.getElementById('lbImg');
+  const vid = document.getElementById('lbVideo');
+  if (typeof item === 'string') {
+    vid.pause(); vid.removeAttribute('src'); vid.style.display = 'none';
+    img.style.display = ''; img.src = item;
+  } else {
+    img.style.display = 'none'; img.removeAttribute('src');
+    vid.style.display = ''; vid.poster = item.poster; vid.src = item.src;
+  }
+  document.getElementById('lbCounter').textContent = (lbIndex+1) + ' / ' + lbImages.length;
+}
+function openLightbox(i) {
+  lbIndex = i;
+  lbShow();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  const vid = document.getElementById('lbVideo');
+  vid.pause(); vid.removeAttribute('src');
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function lbNav(dir) {
+  lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+  lbShow();
+}
+document.addEventListener('keydown', e => {
+  if (document.getElementById('lightbox').classList.contains('open')) {
+    if (e.key==='Escape') closeLightbox();
+    if (e.key==='ArrowLeft') lbNav(-1);
+    if (e.key==='ArrowRight') lbNav(1);
+  }
+});
+
+
+
+
+
+// INIT
+updateNav();
+loadData();
+</script>
+
+<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+</body>
+</html>
