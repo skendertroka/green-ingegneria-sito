@@ -982,7 +982,7 @@ function renderModel3D() {
           <p>Ruota e ingrandisci il modello con il mouse o con le dita, e usa la barra di ricerca per trovare un elemento digitando la marca.</p>
           <div class="m3d-actions">
             <button class="m3d-btn" onclick="loadModel3D()">Avvia qui</button>
-            <a class="m3d-btn m3d-btn-alt" href="modelli/bertoni-uss3.html" target="_blank" rel="noopener">Apri a schermo intero</a>
+            <a class="m3d-btn m3d-btn-alt" href="bertoni-uss3.html" target="_blank" rel="noopener">Apri a schermo intero</a>
           </div>
           <small>Il modello è pesante (circa 2 MB): si carica solo quando lo avvii.</small>
         </div>
@@ -990,7 +990,7 @@ function renderModel3D() {
     </div>`;
 }
 function loadModel3D() {
-  document.getElementById('m3dBox').innerHTML = '<iframe src="modelli/bertoni-uss3.html" title="Modello 3D interattivo" allowfullscreen></iframe>';
+  document.getElementById('m3dBox').innerHTML = '<iframe src="bertoni-uss3.html" title="Modello 3D interattivo" allowfullscreen></iframe>';
 }
 function renderPortfolio(key) {
   currentProject = key;
